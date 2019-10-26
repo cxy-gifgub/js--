@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+            .kk{
+            color:red;
+        }
+        </style>
+        
+    </head>
+    <body>
+        <p id="p1">激活windows转到设置</p>
+        <script>
+            var p1 = document.getElementById('p1').innerHTML;
+            // var a = p1.split("激活");
+            // var c = a.join("多大事")
+            // var c = p1.indexOf("激活"); //查询是否存在“激活”，查询第一次出现的位置，如果没查到，数值为-1
+            // if(c!=-1){
+            //     document.getElementById('p1').className = "kk";
+            // }
+		    var n = p1.split("激活").join("<font color='red'>"+ "激活" +"</font>");  //split查询“激活在不在里面”，然后使用join替换掉split切掉的内容
+		    document.getElementById('p1').innerHTML=n;
+
+        </script>
+    </body>
+</html>
